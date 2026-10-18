@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>12月5日猴硐小旅遊</title>
+<style>
+:root{--bg:#f3f5ef;--card:#fff;--ink:#27332b;--mute:#5e6d62;--line:#d9e0d3;--main:#5f7a55;--on:#fff;--acc:#d9822b;--soft:#e7eee0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a16;--card:#1c251f;--ink:#e8efe6;--mute:#a1b0a4;--line:#2d3a30;--main:#8fb383;--on:#10190f;--acc:#f0a050;--soft:#243028}}
+:root[data-theme="dark"]{--bg:#141a16;--card:#1c251f;--ink:#e8efe6;--mute:#a1b0a4;--line:#2d3a30;--main:#8fb383;--on:#10190f;--acc:#f0a050;--soft:#243028}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.7 "Microsoft JhengHei","微軟正黑體","PingFang TC",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--main);z-index:20}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--main);color:var(--on)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.brand{font-weight:700;font-size:18px;text-decoration:none;color:inherit}
+nav a{color:inherit;text-decoration:none;margin-left:18px;font-size:15px;opacity:.95}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.hero{padding:44px 0 20px}
+.hero small{color:var(--mute);font-size:14px}
+h1{font:700 clamp(32px,6vw,54px)/1.2 "Microsoft JhengHei","微軟正黑體","PingFang TC",sans-serif;margin:6px 0 12px}
+.hero p{color:var(--mute);max-width:36em;margin:0 0 16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:var(--soft);border-radius:999px;padding:4px 14px;font-size:14px}
+section{padding:34px 0 6px}
+h2{font:700 28px "Microsoft JhengHei","微軟正黑體","PingFang TC",sans-serif;margin:0 0 6px}
+.sub{color:var(--mute);margin:0 0 18px;font-size:15px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{border:1.5px solid var(--main);background:transparent;color:var(--ink);padding:7px 18px;border-radius:999px;font:500 15px inherit;font-family:inherit;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--main);color:var(--on)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.tl{list-style:none;margin:0;padding:0;border-left:3px solid var(--main);margin-left:8px}
+.tl li{position:relative;padding:0 0 18px 22px}
+.tl li::before{content:"";position:absolute;left:-9px;top:8px;width:15px;height:15px;border-radius:50%;background:var(--card);border:3px solid var(--acc)}
+.tl .t{font-weight:700;font-size:15px;color:var(--main)}
+.tl .n{font-weight:700;font-size:17px}
+.tl .d{color:var(--mute);font-size:14.5px}
+.note{background:var(--soft);border-radius:10px;padding:10px 14px;font-size:14.5px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.food{display:flex;flex-direction:column;gap:6px;padding:14px 16px}
+.food b{font-size:17px}
+.food .z{font-size:13.5px;color:var(--mute)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.row a{color:var(--main);font-size:14.5px;font-weight:500}
+.food label{font-size:14.5px;display:flex;gap:6px;align-items:center;cursor:pointer}
+.food.done b{text-decoration:line-through;opacity:.6}
+.times{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+.times span{background:var(--soft);border-radius:8px;padding:3px 12px;font-weight:700}
+form.add{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+form.add input{padding:9px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;min-width:0}
+form.add input[name=n]{flex:2 1 160px}form.add input[name=p]{flex:1 1 90px}
+form.add button,.del{border:0;border-radius:8px;background:var(--acc);color:#2a1800;font:700 15px inherit;font-family:inherit;padding:9px 18px;cursor:pointer}
+.del{background:transparent;color:var(--mute);padding:2px 8px;box-shadow:inset 0 0 0 1px var(--line)}
+.exp{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+.total{font-weight:700;font-size:18px;margin-top:12px;text-align:right}
+footer{color:var(--mute);font-size:13.5px;padding:34px 0 40px;text-align:center}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="#home">🚆 12月5日猴硐小旅遊</a><nav><a href="#plan">行程</a><a href="#spots">景點</a><a href="#food">美食</a><a href="#train">車次</a><a href="#cost">花費</a></nav></div></header>
+<div class="wrap" id="home">
+<div class="hero">
+<h1>12月5日猴硐小旅遊</h1>
+<div class="tags"><span>🚆 板橋出發</span><span>🐈 猴硐</span><span>💧 十分瀑布</span><span>🍜 瑞芳老街</span></div>
+</div>
+
+<section id="plan">
+<h2>兩個方案</h2>
+<p class="sub">點選方案即可切換，每次只顯示一個。</p>
+<div class="tabs" id="planTabs"></div>
+<div class="card" id="planBox"></div>
+</section>
+
+<section id="spots">
+<h2>猴硐景點</h2>
+<p class="sub">猴硐想去的地方。勾選「去過了」會劃掉並保留在這台裝置上；點「地圖」可開啟 Google 地圖。</p>
+<div class="grid" id="spotGrid"></div>
+</section>
+
+<section id="food">
+<h2>美食清單</h2>
+<p class="sub">勾選「吃過了」會劃掉並保留在這台裝置上；點「地圖」可開啟 Google 地圖。</p>
+<div class="tabs" id="foodTabs"></div>
+<div class="grid" id="foodGrid"></div>
+</section>
+
+<section id="train">
+<h2>搭車時間</h2>
+<p class="sub">方案二的瑞芳 → 猴硐、猴硐 → 板橋為多班次，挑一班搭即可。</p>
+<div class="card" id="trainBox"></div>
+</section>
+
+<section id="cost">
+<h2>花費記錄</h2>
+<p class="sub">記下吃的、買的，下方自動加總。</p>
+<div class="card">
+<form class="add" id="f"><input name="n" placeholder="項目，例如：十分黑豬肉香腸" required aria-label="項目"><input name="p" type="number" min="0" inputmode="numeric" placeholder="金額 NT$" required aria-label="金額"><button type="submit">新增</button></form>
+<div id="exps"></div>
+<div class="total" id="total"></div>
+</div>
+</section>
+<footer>12月5日猴硐小旅遊｜發車時間依文件整理，出發前請再到台鐵官網確認班次。</footer>
+</div>
+<script>
+var PLANS=[
+{k:"方案一",t:"猴硐 ＋ 十分瀑布",steps:[
+{t:"9:09 → 10:36",n:"板橋 → 猴硐",d:"搭火車前往，約 1 小時 27 分。"},
+{t:"10:36 → 13:07",n:"猴硐",d:"約 2.5 小時，在猴硐自由逛。"},
+{t:"13:07 → 13:27",n:"猴硐 → 十分",d:"搭火車前往十分。"},
+{t:"13:27 之後",n:"十分老街吃東西",d:"阿美的食堂、十分黑豬肉香腸、十分冬天柳橙汁、十分寶桂臭豆腐、花生捲 X 阿宗芋冰。"},
+{t:"步行約 20 分鐘",n:"十分車站 → 十分瀑布",d:"從十分車站走過去約 20 分鐘，15:35 的車，記得 15:00 前要折返。"},
+{t:"15:35 → 16:04",n:"十分 → 瑞芳",d:"搭火車轉往瑞芳。"},
+{t:"16:09 → 17:13",n:"瑞芳 → 板橋",d:"搭火車回板橋。"}],note:""},
+{k:"方案二",t:"瑞芳老街 ＋ 猴硐",steps:[
+{t:"9:09 → 10:36",n:"板橋 → 瑞芳",d:"搭火車前往瑞芳。"},
+{t:"10:36 之後",n:"瑞芳老街吃東西",d:"老街吃吃東西，有時間可以去瑞芳老街創生基地逛逛。"},
+{t:"11:40 / 11:55 / 12:15 / 12:52 / 13:00",n:"瑞芳 → 猴硐",d:"依逛街進度挑一班搭，車程約 6 分鐘。"},
+{t:"猴硐",n:"猴硐逛逛",d:"下午在猴硐散步。"},
+{t:"15:22 / 16:42 / 17:17",n:"猴硐 → 板橋",d:"挑一班搭回板橋。"}],note:"原文件第一段寫「猴硐 → 瑞芳」，但 9:09 與方案一同為板橋出發時間，這裡先當成板橋 → 瑞芳，請再確認。"}];
+var FOODS=[
+["阿美的食堂","十分"],["十分黑豬肉香腸","十分"],["十分冬天柳橙汁","十分"],["十分寶桂臭豆腐","十分"],["花生捲 X 阿宗芋冰","十分"],
+["蔡大娘麵疙瘩","瑞芳"],["阿霞龍鳳腿","瑞芳"],["阿婆番薯粿","瑞芳"],["豐味肉羹","瑞芳"],["食號","瑞芳"],["塔諾妮（芋泥）","瑞芳"],["紅茶老店","瑞芳"],["保雲芋園","瑞芳"],["瑞芳老街創生基地","瑞芳"]];
+var plan=0,area="全部",eaten={},exps=[];
+function $(i){return document.getElementById(i)}
+function ld(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function sv(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function tabs(el,list,cur,fn){el.innerHTML="";list.forEach(function(x,i){var b=document.createElement("button");b.className="tab";b.textContent=x;b.setAttribute("aria-pressed",i===cur||x===cur);b.onclick=function(){fn(i,x)};el.appendChild(b)})}
+function rPlan(){
+ tabs($("planTabs"),PLANS.map(function(p){return p.k+"｜"+p.t}),plan,function(i){plan=i;rPlan()});
+ var p=PLANS[plan];
+ $("planBox").innerHTML='<ul class="tl">'+p.steps.map(function(s){return '<li><div class="t">'+s.t+'</div><div class="n">'+s.n+'</div><div class="d">'+s.d+'</div></li>'}).join("")+'</ul>'+(p.note?'<div class="note">⚠️ '+p.note+'</div>':'')}
+function rFood(){
+ tabs($("foodTabs"),["全部","十分","瑞芳"],area,function(i,x){area=x;rFood()});
+ var g=$("foodGrid");g.innerHTML="";
+ FOODS.filter(function(f){return area==="全部"||f[1]===area}).forEach(function(f){
+  var e=document.createElement("div");e.className="card food"+(eaten[f[0]]?" done":"");
+  e.innerHTML='<b>'+f[0]+'</b><span class="z">'+f[1]+(f[1]==="十分"?"・方案一":"・方案二")+'</span><div class="row"><label><input type="checkbox"'+(eaten[f[0]]?" checked":"")+'> 吃過了</label><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(f[0].replace(/（.*）/,"")+" "+f[1])+'">📍 地圖</a></div>';
+  e.querySelector("input").onchange=function(){if(this.checked)eaten[f[0]]=1;else delete eaten[f[0]];sv("nt_eaten",eaten);rFood()};
+  g.appendChild(e)})}
+function rTrain(){
+ function T(a){return '<div class="times">'+a.map(function(x){return '<span>'+x+'</span>'}).join("")+'</div>'}
+ $("trainBox").innerHTML='<h3>方案一</h3><p>板橋 → 猴硐　9:09 → 10:36<br>猴硐 → 十分　13:07 → 13:27<br>十分 → 瑞芳　15:35 → 16:04<br>瑞芳 → 板橋　16:09 → 17:13</p><h3>方案二</h3><p>板橋 → 瑞芳　9:09 → 10:36</p><b>瑞芳 → 猴硐</b>'+T(["11:40","11:55","12:15","12:52","13:00"])+'<b>猴硐 → 板橋</b>'+T(["15:22","16:42","17:17"])}
+function rCost(){
+ var s=0;$("exps").innerHTML=exps.length?"":'<p style="color:var(--mute)">還沒有記錄。吃到好吃的就記下來吧。</p>';
+ exps.forEach(function(x,i){s+=x.p;var d=document.createElement("div");d.className="exp";d.innerHTML='<span>'+x.n.replace(/</g,"&lt;")+'　NT$ '+x.p+'</span><button class="del" aria-label="刪除 '+x.n.replace(/"/g,"")+'">刪除</button>';d.querySelector("button").onclick=function(){exps.splice(i,1);sv("nt_exps",exps);rCost()};$("exps").appendChild(d)});
+ $("total").textContent="總額：NT$ "+s}
+$("f").onsubmit=function(e){e.preventDefault();var f=e.target;exps.push({n:f.n.value.trim(),p:Number(f.p.value)||0});sv("nt_exps",exps);f.reset();rCost()};
+var SPOTS=["金石工坊猴硐招財貓本舖","煤之鄉貓咪鳳梨酥","貓村禮品店","貓掌屋","猴硐礦坑休閒園區","猴硐煤礦博物園區","Meow Meow 喵喵","躲喵喵咖啡館 Hide and seek cafe","Murmur Land cafe"],visited={};
+function rSpots(){
+ var g=$("spotGrid");g.innerHTML="";
+ SPOTS.forEach(function(s){
+  var e=document.createElement("div");e.className="card food"+(visited[s]?" done":"");
+  e.innerHTML='<b>'+s+'</b><span class="z">猴硐</span><div class="row"><label><input type="checkbox"'+(visited[s]?" checked":"")+'> 去過了</label><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s+" 猴硐")+'">📍 地圖</a></div>';
+  e.querySelector("input").onchange=function(){if(this.checked)visited[s]=1;else delete visited[s];sv("nt_spots",visited);rSpots()};
+  g.appendChild(e)})}
+eaten=ld("nt_eaten",{});exps=ld("nt_exps",[]);visited=ld("nt_spots",{});
+rPlan();rSpots();rFood();rTrain();rCost();
+</script>
+</body>
+</html>
